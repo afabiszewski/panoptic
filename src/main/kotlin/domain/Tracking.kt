@@ -1,5 +1,7 @@
-import Tracking.Action.COUNT
-import Tracking.Action.STORE
+package domain
+
+import domain.Tracking.Action.COUNT
+import domain.Tracking.Action.STORE
 import java.util.EnumSet
 import java.util.EnumSet.of
 
@@ -13,6 +15,7 @@ enum class Tracking(
 
     enum class Action {
         COUNT,
+        SEND,
         STORE,
     }
 

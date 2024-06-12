@@ -1,4 +1,6 @@
-import Tracking.Action
+package domain
+
+import domain.Tracking.Action
 import java.time.LocalDateTime
 import java.util.EnumSet
 import java.util.UUID

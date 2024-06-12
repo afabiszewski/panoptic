@@ -1,5 +1,13 @@
-import Tracking.Action.COUNT
-import Tracking.Action.STORE
+package domain
+
+import domain.Tracking.Action.COUNT
+import domain.Tracking.Action.STORE
+import command.Command
+import command.CommandProcessor
+import command.CountCommand
+import command.SendCommand
+import command.StoreCommand
+import domain.Tracking.Action.SEND
 
 class TrackingService {
 
@@ -12,6 +20,7 @@ class TrackingService {
         actions.map {
             when (it) {
                 COUNT -> CountCommand.from(event)
+                SEND -> SendCommand.from(event)
                 STORE -> StoreCommand.from(event)
             }
         }.toTypedArray()

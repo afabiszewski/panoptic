@@ -1,3 +1,6 @@
+package infrastructure
+
+import domain.Event
 import java.util.UUID
 import kotlin.collections.HashMap
 
